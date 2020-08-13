@@ -1,0 +1,151 @@
+body {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.main-application {
+  display: flex;
+}
+
+h1 {
+  margin-left: 70px;
+}
+
+ul {
+  list-style: none;
+}
+
+.day {
+  width: 100px;
+  height: 25px;
+
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
+
+  border: 2px solid transparent;
+}
+
+.day:hover {
+  border: 2px solid red;
+}
+
+.active {
+  border: 2px solid black;
+}
+
+.week-days {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+.day:first-child {
+  order: 1;
+}
+
+.tasks-block {
+  position: relative;
+
+  width: 300px;
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+
+  border: 2px solid black;
+}
+
+.button__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  width: 25px;
+  height: 25px;
+
+  font-weight: 700;
+  font-size: 40px;
+
+  background: none;
+  border: none;
+  outline: none;
+  cursor: grab;
+}
+
+.input__field {
+  position: absolute;
+  bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.input__time {
+  flex-shrink: 1;
+  width: 80px;
+  margin-right: 25px;
+}
+
+.input__description {
+  width: 100px;
+}
+
+.button__add-task {
+  margin-left: 20px;
+
+  font-weight: 700;
+  font-size: 20px;
+
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+
+  animation: slide-up 400ms;
+}
+
+.task--passed {
+  color: red;
+}
+
+.task p {
+  margin: 0;
+
+  text-align: center;
+}
+
+.task p:first-child {
+  width: 80px;
+}
+
+.task p:nth-child(1) {
+  width: 100px;
+}
+
+.button__delete {
+  margin-left: 20px;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
